@@ -1,0 +1,24 @@
+{
+  "name": "session.share.web",
+  "version": "1.0.0",
+  "description": "session web share",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenzuo/Session.Share.Web.git"
+  },
+  "keywords": [
+    "session",
+    "web",
+    "share"
+  ],
+  "author": "chenzuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chenzuo/Session.Share.Web/issues"
+  },
+  "homepage": "https://github.com/chenzuo/Session.Share.Web#readme"
+}
