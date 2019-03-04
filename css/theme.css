@@ -1,7 +1,7 @@
 body {
-    padding-top: 70px;
-    padding-bottom: 30px;
-    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font: 12px/1.5 Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -16,4 +16,58 @@ body {
 
 .theme-showcase .navbar .container {
     width: auto;
+}
+
+.link-dark {
+    cursor: pointer;
+    color: #616161 !important;
+}
+
+.text-sm {
+    font-size: 12px !important;
+}
+
+.es-convenient-link {
+    border-top: 1px solid #e1e8ed;
+    background-color: #f5f8fa;
+    padding: 20px 0;
+}
+
+.es-convenient-link .container .title {
+    position: absolute;
+    left: 0;
+    padding-left: 80px;
+    color: black;
+    font-size: 16px;
+}
+
+.es-convenient-link .container ul {
+    padding-left: 80px;
+    margin-bottom: 0;
+}
+
+.es-convenient-link .container ul li {
+    margin: 5px 30px;
+    display: inline-block;
+}
+
+.es-footer {
+    position: relative;
+}
+
+.es-footer .copyright {
+    background: #212121;
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 20px 0;
+    line-height: 30px;
+    color: #c1c1c1;
+}
+
+.es-footer .copyright a {
+    color: #c1c1c1;
+}
+
+.es-footer .copyright .container span {
+    margin-left: 10px !important;
 }
