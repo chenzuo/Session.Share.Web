@@ -10,6 +10,11 @@ body {
     background: none;
     margin: 12px auto;
     padding: 8px 0;
+    color: #777;
+}
+
+.breadcrumb.breadcrumb-o>.active {
+    color: black;
 }
 
 .course-detail-section {
@@ -77,10 +82,38 @@ body {
 .panel-default>.panel-heading .panel-title {
     padding: 5px 0;
     color: #313131;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .panel-default>.panel-body {
     position: relative;
     padding: 15px 0;
+}
+
+.es-piece {
+    margin-bottom: 30px;
+}
+
+.course-detail-content .es-piece {
+    margin-bottom: 50px;
+}
+
+.es-piece .piece-header {
+    position: relative;
+    margin: 5px auto 20px;
+    padding: 0 30px 0 15px;
+    color: #313131;
+    font-size: 14px;
+}
+
+.piece-header-title {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 14.5px;
+    border-left: 5px solid #eee;
+}
+
+.piece-body {
+    margin: 5px auto 20px;
+    padding: 0 30px 0 15px;
 }
