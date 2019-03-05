@@ -1,4 +1,6 @@
 body {
+    word-wrap: break-word;
+    text-rendering: optimizeLegibility;
     padding-top: 50px;
     padding-bottom: 20px;
     font: 12px/1.5 Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
@@ -51,6 +53,10 @@ body {
     display: inline-block;
 }
 
+.es-convenient-link .es-mit-instructions {
+    text-align: center;
+}
+
 .es-footer {
     position: relative;
 }
@@ -70,4 +76,83 @@ body {
 
 .es-footer .copyright .container span {
     margin-left: 10px !important;
+}
+
+.course-list {
+    padding: 0;
+}
+
+.course-list .course-item {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #e4ecf3;
+    background-color: #fff;
+}
+
+.course-list .course-item .course-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.course-list .course-item .course-img .img-responsive {
+    width: 100%;
+    padding: 10px;
+}
+
+.course-list .course-item .title {
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 10px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.course-list .course-item .metas {
+    position: relative;
+    padding: 10px;
+    color: #c1c1c1;
+}
+
+.course-list .course-item .metas .comment {
+    margin-left: 10px;
+}
+
+.course-list .course-price-widget {
+    float: right;
+}
+
+.section-more-btn {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.btn,
+.btn-xs,
+.btn-sm,
+.btn-lg {
+    font-size: 13px;
+    padding: 12px 35px;
+}
+
+.btn-default.active,
+.btn-default.focus,
+.btn-default:focus,
+.btn-default:hover {
+    color: #616161;
+    background-color: #e1e1e1;
+}
+
+.btn-default {
+    color: #616161;
+    background-color: #f5f5f5;
+    border-color: #dcdcdc;
 }

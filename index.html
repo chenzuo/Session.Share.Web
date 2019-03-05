@@ -20,7 +20,8 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -34,7 +35,8 @@
                     <li><a href="#about">实用示例</a></li>
                     <li><a href="#contact">我要分享</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">代码片断/便捷工具<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">代码片断/便捷工具<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
@@ -53,39 +55,96 @@
 
     <div class="jumbotron">
         <div class="container">
-            <h1>工作中的.Net Core!</h1>
-            <p>工作中如何快速使用.Net Core 搭建系统原型？如何在工作中解决业务系统使用到的技术难点 ...</p>
+            <h3>工作中的.Net Core!</h3>
+            <blockquote>
+                <p>工作中如何快速使用.Net Core 搭建系统原型？如何在工作中解决业务系统使用到的技术难点 ...</p>
+            </blockquote>
         </div>
     </div>
 
     <div class="container">
         <div class="page-header">
-            <ul class="nav nav-pills hidden-xs">
-                <li class="active"><a>视频课程</a></li>
+            <ul class="nav nav-pills">
+                <li class="active"><a class="btn-xs btn-sm btn-lg">视频课程</a></li>
             </ul>
         </div>
     </div>
 
     <div class="container marketing">
-        <div class="row">
+        <div class="row course-list">
             <div class="col-lg-3 col-md-4 col-xs-6">
-                <div>
-                    <div>
-                        image
+                <div class="course-item">
+                    <div class="course-img">
+                        <img class="img-responsive" src="./img/17344226e78c727999.png" />
                     </div>
-                    <div>
-                        <div>ASP.NET Core快速入门</div>
-                        <div><span></span></div>
+                    <div class="course-info">
+                        <div class="title">分布式应用框架Azure Service Fabric中的版本升级、故障转移</div>
+                        <div class="metas clearfix">
+                            <span>item1</span>
+                            <span class="comment">item2</span>
+                            <span class="comment">item2</span>
+                            <span class="course-price-widget">itme3</span>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6"></div>
-            <div class="col-lg-3 col-md-4 col-xs-6"></div>
-            <div class="col-lg-3 col-md-4 col-xs-6"></div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="course-item">
+                    <div class="course-img">
+                        <img class="img-responsive" src="./img/17344226e78c727999.png" />
+                    </div>
+                    <div class="course-info">
+                        <div class="title">分布式应用框架Azure Service Fabric中的版本升级、故障转移</div>
+                        <div class="metas clearfix">
+                            <span>item1</span>
+                            <span class="comment">item2</span>
+                            <span class="comment">item2</span>
+                            <span class="course-price-widget">itme3</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="course-item">
+                    <div class="course-img">
+                        <img class="img-responsive" src="./img/17344226e78c727999.png" />
+                    </div>
+                    <div class="course-info">
+                        <div class="title">分布式应用框架Azure Service Fabric中的版本升级、故障转移</div>
+                        <div class="metas clearfix">
+                            <span>item1</span>
+                            <span class="comment">item2</span>
+                            <span class="comment">item2</span>
+                            <span class="course-price-widget">itme3</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="course-item">
+                    <div class="course-img">
+                        <img class="img-responsive" src="./img/17344226e78c727999.png" />
+                    </div>
+                    <div class="course-info">
+                        <div class="title">分布式应用框架Azure Service Fabric中的版本升级、故障转移</div>
+                        <div class="metas clearfix">
+                            <span>item1</span>
+                            <span class="comment">item2</span>
+                            <span class="comment">item2</span>
+                            <span class="course-price-widget">itme3</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-
+        <div class="section-more-btn">
+            <a class="btn btn btn-default btn-xs btn-sm btn-lg">期待更多课程吧!</a>
+        </div>
     </div>
-
 
     <div class="es-convenient-link">
         <div class="container">
@@ -95,6 +154,12 @@
                     <a class="link-dark text-sm">并发MSDN</a>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <div class="es-convenient-link">
+        <div class="container">
+            <div class="es-mit-instructions">*本站布局参考开源<a href="https://v3.bootcss.com/">Bootstrap</a>示例项目，所有源码已经提交到Github，欢迎大家使用，如有疑问请联系我。*</div>
         </div>
     </div>
 
