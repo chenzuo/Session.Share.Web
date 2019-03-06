@@ -1,0 +1,6 @@
+Nginx在linux下有二种安装方式：
+OPTION A.Install Nginx-Source Installation
+OPTION B.Install Nginx-Installation via yum repository
+
+现我介绍在CentOS7下的OPTION A.源码方式安装
+

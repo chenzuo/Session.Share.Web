@@ -20,8 +20,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -88,7 +87,7 @@
                                 <div class="piece-body clearfix">
                                     <div class="piece-body-content">
                                         <ol>
-                                            <li>基础开发环境搭建</li>
+                                            <li>.NET Core SDK 在开发环境安装</li>
                                             <li>集成开发工具安装</li>
                                             <li>.NET Core 运行实时在目标操作系统（linux）上的安装</li>
                                             <li>Nginx反向代理服务安装</li>
@@ -100,15 +99,88 @@
 
                         <div class="tab-pane fade" id="demo-tree-list">
                             <div class="es-piece">
-                                <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
-                                    TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+                                <div class="piece-header">
+                                    <div class="piece-header-title">
+                                        .NET Core SDK 在开发环境中的安装
+                                    </div>
+                                </div>
+                                <div class="piece-body clearfix">
+                                    <div class="piece-body-code-example">
+                                        <p> <strong>一、Windows下载安装.NET Core SDK</strong></p>
+                                        <p class="piece-body-code-example-code-description">在Microsoft下载Windows下的.NET Core SDK安装包，下载完成后直接安装即可。安装完成后，以管理员方式打开Windows PowerShell执行以下命令，查看是否正确安装。</p>
+                                        <pre><code>#>dotnet --info</code></pre>
+                                        <p class="piece-body-code-example-code-description">
+                                            以下是返回安装成功后的显示信息
+                                        </p>
+                                        <pre><samp>PS C:\WINDOWS\system32> dotnet --info
+                                                .NET Core SDK（反映任何 global.json）:
+                                                 Version:   2.2.103
+                                                 Commit:    8edbc2570a
+                                                
+                                                运行时环境:
+                                                 OS Name:     Windows
+                                                 OS Version:  10.0.17134
+                                                 OS Platform: Windows
+                                                 RID:         win10-x64
+                                                 Base Path:   C:\Program Files\dotnet\sdk\2.2.103\</samp></pre>
+                                    </div>
+                                </div>
+
+                                <div class="piece-header">
+                                    <div class="piece-header-title">
+                                        Nginx反向代理服务安装:Nginx源码安装方式
+                                    </div>
+                                </div>
+                                <div class="piece-body clearfix">
+                                    <div class="piece-body-code-example">
+                                        <p><strong>一、GCC安装</strong></p>
+                                        <p class="piece-body-code-example-code-description">用于编译Nginx源码的编译环境</p>
+                                        <pre><code>#>yum -y install gcc gcc-c++ autoconf automake make</code></pre>
+                                        <p><strong>二、PCRE pcre-devel 安装</strong></p>
+                                        <p class="piece-body-code-example-code-description">
+                                            PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库。nginx也需要此库。
+                                        </p>
+                                        <pre><code>#>yum install -y pcre pcre-devel</code></pre>
+                                        <p><strong>三、zlib库安装</strong></p>
+                                        <p class="piece-body-code-example-code-description">zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ,如果要在nginx中启用这个功能，必须安装zlib模块。</p>
+                                        <pre><code>#>yum install -y zlib zlib-devel</code></pre>
+                                        <p>四、OpenSSL 安装</p>
+                                        <p class="piece-body-code-example-code-description">OpenSSL是安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。 nginx 不仅支持 http 协议，还支持 https（即在ssl协议上传输http）。如果要在nginx中启用此功能，必须在nginx中编译时就应一起编译安装此库。
+                                        </p>
+                                        <pre><code>#>yum install -y openssl openssl-devel</code></pre>
+
+                                        <p>五、wget方式下载安装包到linux指定目录下</p>
+
+                                        用wget方式直接下载<a href="https://nginx.org/">nginx</a>目标安装包。
+                                        </p>
+                                        <pre><code>#>wget -c https://nginx.org/download/nginx-1.15.9.tar.gz</code></pre>
+                                        <p>六、解压安装包</p>
+                                        <pre><code>#>tar -zxvf nginx-1.15.9.tar.gz</code></pre>
+                                        <p>七、编译设置</p>
+                                        <p class="piece-body-code-example-code-description">
+                                            nginx在编译前允许对编译后的目标进行设置。如果你不设置其他任何选项，那么默认就可以了。我们这里设置https与gzip压缩方式。</p>
+                                        <pre><code>#>cd nginx-1.15.9</code></pre>
+                                        <pre><code>#>./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-pcre
+                                        </code></pre>
+                                        <p>八、编译安装</p>
+                                        <p class="piece-body-code-example-code-description">执行编译安装命令后，就会自动安装到指定位置。如果编译成功会显示成功提示。如在这个过程中出现编译异常，请在通过网络搜索异常信息来解决。</p>
+                                        <pre><code>#>make & make install</code></pre>
+                                        <p>九、启动Nginx服务器与测试</p>
+                                        <pre><code>#>cd /usr/local/nginx/sbin/</code></pre>
+                                        <pre><code>#>./nginx </code></pre>
+                                        <pre><code>#>./nginx -s stop</code></pre>
+                                        <pre><code>#>./nginx -s quit</code></pre>
+                                        <pre><code>#>./nginx -s reload</code></pre>
+                                        <p class="piece-body-code-example-code-description"></p>
+                                        <pre><code>#>ps aux|grep nginx</code></pre>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="tab-pane fade" id="contact-me">
                             <div class="es-piece">
-                                <div class="alert alert-info">如有问题请在项目<a href="https://github.com/chenzuo/Session.Share.Web">Session.Share.Web</a>中的<a
-                                        href="https://github.com/chenzuo/Session.Share.Web/issues">Issues</a>中提出，感谢你的支持。</div>
+                                <div class="alert alert-info">如有问题请在项目<a href="https://github.com/chenzuo/Session.Share.Web">Session.Share.Web</a>中的<a href="https://github.com/chenzuo/Session.Share.Web/issues">Issues</a>中提出，感谢你的支持。</div>
                             </div>
                         </div>
                     </div>
