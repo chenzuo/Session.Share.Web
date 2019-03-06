@@ -34,7 +34,13 @@ body {
 
 .course-detail-section .course-detail-top {
     padding-right: 130px;
+    padding: 10px;
 }
+
+.blockquote-title-p {
+    font-size: 14px;
+}
+
 
 .es-section {
     background: #fff;
@@ -114,6 +120,14 @@ body {
 }
 
 .piece-body {
-    margin: 5px auto 20px;
-    padding: 0 30px 0 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.piece-body-content {
+    margin: 2px auto 20px;
+    padding: 0 0 0 10px;
+    line-height: 200%;
+    font-weight: 400;
+    font-size: 105%;
 }
