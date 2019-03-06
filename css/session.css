@@ -97,11 +97,15 @@ body {
 }
 
 .es-piece {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.es-piece>p {
+    margin: 0px;
 }
 
 .course-detail-content .es-piece {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 .es-piece .piece-header {
@@ -130,4 +134,8 @@ body {
     line-height: 200%;
     font-weight: 400;
     font-size: 105%;
+}
+
+.tab-pane>.es-piece>.alert-info {
+    margin-top: 40px;
 }

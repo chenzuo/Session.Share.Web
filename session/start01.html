@@ -73,21 +73,42 @@
                 <section class="es-section">
                     <div class="nav-btn-tab">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a>课程大纲</a></li>
-                            <li><a>示例代码 / 脚本说明</a></li>
-                            <li><a>我要纠正</a></li>
+                            <li class="active"><a href="#home" data-toggle="tab">课程大纲</a></li>
+                            <li><a href="#demo-tree-list" data-toggle="tab">示例代码 / 脚本说明</a></li>
+                            <li><a href="#contact-me" data-toggle="tab">我要纠正</a></li>
                         </ul>
                     </div>
-                    <div class="es-piece">
-                        <div class="piece-header">
-                            <div class="piece-header-title">.NET Core 开发、运行环境的准备</div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="home">
+                            <div class="es-piece">
+                                <div class="piece-header">
+                                    <div class="piece-header-title">.NET Core 开发、运行环境的准备</div>
+                                </div>
+                                <div class="piece-body clearfix">
+                                    <div class="piece-body-content">
+                                        <ol>
+                                            <li>基础开发环境搭建</li>
+                                            <li>集成开发工具安装</li>
+                                            <li>.NET Core 运行实时在目标操作系统（linux）上的安装</li>
+                                            <li>Nginx反向代理服务安装</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="piece-body clearfix">
-                            <div class="piece-body-content">
-                                <ol>
-                                    <li>.NET Core 运行实时在目标操作系统（linux）上的安装</li>
-                                    <li>Nginx反向代理服务安装</li>
-                                </ol>
+
+                        <div class="tab-pane fade" id="demo-tree-list">
+                            <div class="es-piece">
+                                <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+                                    TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="contact-me">
+                            <div class="es-piece">
+                                <div class="alert alert-info">如有问题请在项目<a href="https://github.com/chenzuo/Session.Share.Web">Session.Share.Web</a>中的<a
+                                        href="https://github.com/chenzuo/Session.Share.Web/issues">Issues</a>中提出，感谢你的支持。</div>
                             </div>
                         </div>
                     </div>
@@ -97,7 +118,7 @@
             <div class="col-lg-3 col-md-4 course-sidebar">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <span class="panel-title">分享作者：留得华</span>
+                        <span class="panel-title">分享作者：CHENZUO</span>
                     </div>
                     <div class="panel-body"></div>
                 </div>
@@ -107,7 +128,8 @@
     </div>
     <div class="es-convenient-link">
         <div class="container">
-            <div class="es-mit-instructions">*本站布局参考开源<a href="https://v3.bootcss.com/">Bootstrap</a>示例项目，所有源码已经提交到Github，欢迎大家使用，如有疑问请联系我。*</div>
+            <div class="es-mit-instructions">*本站布局参考开源<a href="https://v3.bootcss.com/">Bootstrap</a>示例项目，所有源码已经提交到Github，欢迎大家使用提交修改意见，如有疑问请联系我。email：
+                <a href="mailto:#">chenzuo-session@hotmail.com</a></div>
         </div>
     </div>
 
