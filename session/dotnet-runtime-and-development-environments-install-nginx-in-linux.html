@@ -60,7 +60,6 @@
                         <small>CentOS 7.4 / Red Hat Enterprise Linux 7.4 / Ubuntu16.4</small>
                     </blockquote>
                 </div>
-
             </div>
             <div class="course-detail-bottom"></div>
         </div>
@@ -174,28 +173,28 @@
                                         <p><strong>三、zlib库安装</strong></p>
                                         <p class="piece-body-code-example-code-description">zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ,如果要在nginx中启用这个功能，必须安装zlib模块。</p>
                                         <pre><code>#>yum install -y zlib zlib-devel</code></pre>
-                                        <p>四、OpenSSL 安装</p>
+                                        <p><strong>四、OpenSSL 安装</strong></p>
                                         <p class="piece-body-code-example-code-description">OpenSSL是安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。 nginx 不仅支持 http 协议，还支持 https（即在ssl协议上传输http）。如果要在nginx中启用此功能，必须在nginx中编译时就应一起编译安装此库。
                                         </p>
                                         <pre><code>#>yum install -y openssl openssl-devel</code></pre>
 
-                                        <p>五、wget方式下载安装包到linux指定目录下</p>
+                                        <p><strong>五、wget方式下载安装包到linux指定目录下</strong></p>
 
                                         用wget方式直接下载<a href="https://nginx.org/">nginx</a>目标安装包。
                                         </p>
                                         <pre><code>#>wget -c https://nginx.org/download/nginx-1.15.9.tar.gz</code></pre>
-                                        <p>六、解压安装包</p>
+                                        <p><strong>六、解压安装包</strong></p>
                                         <pre><code>#>tar -zxvf nginx-1.15.9.tar.gz</code></pre>
-                                        <p>七、编译设置</p>
+                                        <p><strong>七、编译设置</strong></p>
                                         <p class="piece-body-code-example-code-description">
                                             nginx在编译前允许对编译后的目标进行设置。如果你不设置其他任何选项，那么默认就可以了。我们这里设置https与gzip压缩方式。</p>
                                         <pre><code>#>cd nginx-1.15.9</code></pre>
                                         <pre><code>#>./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-pcre
                                         </code></pre>
-                                        <p>八、编译安装</p>
+                                        <p><strong>八、编译安装</strong></p>
                                         <p class="piece-body-code-example-code-description">执行编译安装命令后，就会自动安装到指定位置。如果编译成功会显示成功提示。如在这个过程中出现编译异常，请在通过网络搜索异常信息来解决。</p>
                                         <pre><code>#>make & make install</code></pre>
-                                        <p>九、启动Nginx服务器与测试</p>
+                                        <p><strong>九、启动Nginx服务器与测试</strong></p>
                                         <pre><code>#>cd /usr/local/nginx/sbin/</code></pre>
                                         <pre><code>#>./nginx </code></pre>
                                         <pre><code>#>./nginx -s stop</code></pre>
