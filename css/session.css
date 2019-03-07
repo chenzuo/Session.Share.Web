@@ -3,7 +3,7 @@ body {
     text-rendering: optimizeLegibility;
     padding-top: 50px;
     padding-bottom: 20px;
-    font: 12px/1.5 Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
 }
 
 .breadcrumb.breadcrumb-o {
