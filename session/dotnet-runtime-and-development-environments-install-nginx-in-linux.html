@@ -20,7 +20,8 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -106,22 +107,34 @@
                                 <div class="piece-body clearfix">
                                     <div class="piece-body-code-example">
                                         <p> <strong>一、Windows下载安装.NET Core SDK</strong></p>
-                                        <p class="piece-body-code-example-code-description">在Microsoft下载Windows下的.NET Core SDK安装包，下载完成后直接安装即可。安装完成后，以管理员方式打开Windows PowerShell执行以下命令，查看是否正确安装。</p>
+                                        <p class="piece-body-code-example-code-description">在Microsoft下载Windows下的.NET
+                                            Core SDK安装包，下载完成后直接安装即可。安装完成后，以管理员方式打开Windows PowerShell执行以下命令，查看是否正确安装。</p>
                                         <pre><code>#>dotnet --info</code></pre>
                                         <p class="piece-body-code-example-code-description">
                                             以下是返回安装成功后的显示信息
                                         </p>
-                                        <pre><samp>PS C:\WINDOWS\system32> dotnet --info
-                                                .NET Core SDK（反映任何 global.json）:
-                                                 Version:   2.2.103
-                                                 Commit:    8edbc2570a
-                                                
-                                                运行时环境:
-                                                 OS Name:     Windows
-                                                 OS Version:  10.0.17134
-                                                 OS Platform: Windo
-                                                 RID:         win10-x64
-                                                 Base Path:   C:\Program Files\dotnet\sdk\2.2.103\</samp></pre>
+
+                                        <div class="con">
+                                            <blockquote>
+                                                <ol>
+                                                    <li>
+                                                        <span>
+                                                            C:\WINDOWS\system32> dotnet --info</span>
+                                                    </li>
+                                                    <li><span>.NET Core SDK（反映任何 global.json）:</span></li>
+                                                    <li><span> Version: 2.2.103</span></li>
+                                                    <li><span>Commit: 8edbc2570a</span></li>
+                                                    <li><span></span></li>
+                                                    <li><span>运行时环境:</span></li>
+                                                    <li><span>OS Name: Windows</span></li>
+                                                    <li><span>OS Version: 10.0.17134</span></li>
+                                                    <li><span>OS Platform: Windows</span></li>
+                                                    <li><span>RID: win10-x64</span></li>
+                                                    <li><span>Base Path: C:\Program Files\dotnet\sdk\2.2.103\</span></li>
+                                                    <li><span>......</span></li>
+                                                </ol>
+                                            </blockquote>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -167,14 +180,19 @@
                                         <pre><code>#>yum -y install gcc gcc-c++ autoconf automake make</code></pre>
                                         <p><strong>二、PCRE pcre-devel 安装</strong></p>
                                         <p class="piece-body-code-example-code-description">
-                                            PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库。nginx也需要此库。
+                                            PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx
+                                            的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre
+                                            开发的一个二次开发库。nginx也需要此库。
                                         </p>
                                         <pre><code>#>yum install -y pcre pcre-devel</code></pre>
                                         <p><strong>三、zlib库安装</strong></p>
-                                        <p class="piece-body-code-example-code-description">zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ,如果要在nginx中启用这个功能，必须安装zlib模块。</p>
+                                        <p class="piece-body-code-example-code-description">zlib 库提供了很多种压缩和解压缩的方式，
+                                            nginx 使用 zlib 对 http 包的内容进行 gzip ,如果要在nginx中启用这个功能，必须安装zlib模块。</p>
                                         <pre><code>#>yum install -y zlib zlib-devel</code></pre>
                                         <p><strong>四、OpenSSL 安装</strong></p>
-                                        <p class="piece-body-code-example-code-description">OpenSSL是安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。 nginx 不仅支持 http 协议，还支持 https（即在ssl协议上传输http）。如果要在nginx中启用此功能，必须在nginx中编译时就应一起编译安装此库。
+                                        <p class="piece-body-code-example-code-description">OpenSSL是安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及
+                                            SSL 协议，并提供丰富的应用程序供测试或其它目的使用。 nginx 不仅支持 http 协议，还支持
+                                            https（即在ssl协议上传输http）。如果要在nginx中启用此功能，必须在nginx中编译时就应一起编译安装此库。
                                         </p>
                                         <pre><code>#>yum install -y openssl openssl-devel</code></pre>
 
@@ -209,7 +227,8 @@
 
                         <div class="tab-pane fade" id="contact-me">
                             <div class="es-piece">
-                                <div class="alert alert-info">如有问题请在项目<a href="https://github.com/chenzuo/Session.Share.Web">Session.Share.Web</a>中的<a href="https://github.com/chenzuo/Session.Share.Web/issues">Issues</a>中提出，感谢你的支持。</div>
+                                <div class="alert alert-info">如有问题请在项目<a href="https://github.com/chenzuo/Session.Share.Web">Session.Share.Web</a>中的<a
+                                        href="https://github.com/chenzuo/Session.Share.Web/issues">Issues</a>中提出，感谢你的支持。</div>
                             </div>
                         </div>
                     </div>
