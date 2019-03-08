@@ -1,9 +1,10 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //打包html的插件
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var webpack = require('webpack');
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin'); //打包html的插件
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
+    mode: 'production',
     entry: {
         './js/index': './js/index.js' //入口文件
     },
@@ -15,18 +16,14 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.css$/,
-            use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        // you can specify a publicPath here
-                        // by default it use publicPath in webpackOptions.output
-                        publicPath: '../'
-                    }
-                },
-                "css-loader"
-            ]
-        }]
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader?minimize', 'postcss-loader']
+            },
+            {
+                test: /\.less$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader?minimize', 'postcss-loader', 'less-loader']
+            }
+        ]
     },
     //插件
     plugins: [
